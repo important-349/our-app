@@ -83,8 +83,6 @@ function Reasons() {
       </div>
 
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=EB+Garamond:ital,wght@0,400;1,400&display=swap');
-
         .reasons-wrap {
           margin-bottom: 2rem;
           opacity: 0;

@@ -171,7 +171,7 @@ function Timeline({ role }) {
       {/* Gallery Modal — identical logic to original */}
       {activeGallery && (
         <div style={styles.overlay} onClick={closeGallery}>
-          <div style={styles.modalContent} onClick={ev => ev.stopPropagation()}>
+          <div className="tl-modal-content" style={styles.modalContent} onClick={ev => ev.stopPropagation()}>
             <button style={styles.closeBtn} onClick={closeGallery}>✕</button>
             {(() => {
               const media = allMedia(activeGallery)
@@ -179,9 +179,9 @@ function Timeline({ role }) {
               return (
                 <>
                   {current.type === 'video' ? (
-                    <video src={current.url} controls style={styles.modalMedia} />
+                    <video src={current.url} controls className="tl-modal-media" style={styles.modalMedia} />
                   ) : (
-                    <img src={current.url} alt="" style={styles.modalMedia} />
+                    <img src={current.url} alt="" className="tl-modal-media" style={styles.modalMedia} />
                   )}
                   {media.length > 1 && (
                     <div style={styles.navRow}>
@@ -198,7 +198,15 @@ function Timeline({ role }) {
       )}
 
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=EB+Garamond:ital,wght@0,400;1,400&display=swap');
+        .tl-modal-content {
+          max-height: 85vh;
+          max-height: 85dvh;
+        }
+
+        .tl-modal-media {
+          max-height: 70vh;
+          max-height: 70dvh;
+        }
 
         @keyframes tl-shimmerPass {
           0%   { transform: translateX(-120%) }
@@ -465,7 +473,6 @@ const styles = {
   modalContent: {
     position: 'relative',
     maxWidth: '90vw',
-    maxHeight: '85vh',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -473,7 +480,6 @@ const styles = {
 
   modalMedia: {
     maxWidth: '100%',
-    maxHeight: '70vh',
     borderRadius: '12px',
     boxShadow: '0 20px 60px rgba(0,0,0,0.5)',
   },

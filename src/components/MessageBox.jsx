@@ -124,8 +124,6 @@ function MessageBox() {
 }
 
 const msgboxStyles = `
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=EB+Garamond:ital,wght@0,400;1,400&display=swap');
-
   .msgbox-wrap {
     position: relative;
     background: linear-gradient(

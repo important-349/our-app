@@ -4,9 +4,16 @@
   box-sizing: border-box;
 }
 
+html, #root {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   font-family: 'EB Garamond', Georgia, serif;
   background: radial-gradient(ellipse at top, #fff7f9 0%, #fdeef2 55%, #fbe6ec 100%);
   color: #333;
   min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
 }

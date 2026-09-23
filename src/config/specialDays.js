@@ -1,0 +1,70 @@
+export const NORMAL_AMBIENT_MUSIC_URL = '/music/normal-ambient.mp3'
+
+export const SPECIAL_DAYS = [
+  {
+    id: 'anniversary',
+    type: 'anniversary',
+    month: 6,
+    day: 28,
+    originYear: 2025,
+    previewDays: 5,
+    postDays: 2,
+    eventTitle: 'Happy One Year, My Love',
+    letter: {
+      dateText: 'June 28, 2026',
+      salutation: 'My dearest,',
+      paragraphs: [
+        "One year ago, something wonderful started — you.",
+        "This past year, you have made ordinary days feel like something worth remembering. Your smile is my favorite sight. Your presence is my favorite place.",
+        "I'm so grateful you're mine, and I am yours.",
+      ],
+      signOff: '— forever yours',
+    },
+    revealLines: [
+      { text: '365 days...', delay: 0.3 },
+      { text: 'countless memories...', delay: 1.6 },
+      { text: 'a love that keeps growing.', delay: 2.9 },
+      { text: 'Thank you for every smile, every hug, every quiet moment.', delay: 4.6 },
+      { text: "I don't know exactly where life will take us, but I hope that someday, us and our families become one.", delay: 7.0 },
+    ],
+    buttonTexts: ['One last surprise', 'For you', 'Open when you\'re ready'],
+    ambientMusicUrl: '/music/anniversary-ambient.mp3',
+    musicUrl: 'https://res.cloudinary.com/dzrszofak/video/upload/v1782544589/golden_brown_x_love_story__music_256k_ehw4hv.mp3',
+    signatureText: 'Forever.',
+  },
+  {
+    id: 'birthday',
+    type: 'birthday',
+    month: 9,
+    day: 27,
+    originYear: 2006,          // 20th birthday in 2026
+    previewDays: 5,
+    postDays: 2,
+    eventTitle: 'Happy Birthday, ' + (Math.random() < 0.5 ? 'Entte Anguu' : 'Anguuu'),
+    letter: {
+      dateText: 'September 27',
+      salutation: 'Happy Birthday, Anguuu 🥹❤️',
+      paragraphs: [
+        'ഇന്ന് എന്റെ കൊച്ചിന്റെ 20th birthday alle 🥹🎂',
+        'എത്ര problems vannalum, nee ninte best kodukkanam. ചില days okke valare difficult aayirikkum, ചിലപ്പോൾ എല്ലാം കൂടെ വല്ലാതെ ബുദ്ധിമുട്ടായി തോന്നും… but please, athonnum kond nee thalararuth. Nee strong aayi munnottu poyikondirikkanam, no matter how hard things get. 🫂',
+        'Nee ippo cheyyunna efforts okke oru divasam ninakku thanne proud aayi thonnum. So just keep going, ente kochee. പതുക്കെ പോയാലും okay, but never stop. Ninte dreams okke one by one achieve cheyyanam. Nee agrahikkunna ellam kittanam, nee ആഗ്രഹിക്കുന്നതിലും നല്ലൊരു position-il eththanam. ❤️',
+        'And no matter how many ups and downs vannalum, njan ivide undavum. Ninte koode, ninakku vendi cheer cheythond. 🥹',
+        'I really really hope this 20th year ninakku ഒരുപാട് സന്തോഷവും സമാധാനവും നല്ല കാര്യങ്ങളും കൊണ്ടുവരട്ടെ. Ninte manassil ullathokke, nee ആഗ്രഹിക്കുന്നതൊക്കെ, ഓരോന്നായി നടക്കട്ടെ. 🫶🏻',
+        'I love you sooo muchhh, ente Anguuu. ❤️🥹',
+      ],
+      signOff: 'Happy 20th birthday, ente kocheee! 🎂🫂❤️',
+    },
+    revealLines: [
+      { text: 'Happyyyyyyyy Birthdayyyyy Mutheee 🥹❤️🎂', delay: 0.3 },
+      { text: 'I hope ee 20th year ninakku kore nalla happy moments konduvaratte. 🫶🏻', delay: 1.4 },
+      { text: 'Wish you a new year to grow more, learn more, experience new things, and become an even better version of yourself. Nee agrahikkunna ellam one by one aayi kittatte, and ee year ninakku orupaadu nalla memories undaavatte. ❤️', delay: 2.7 },
+      { text: 'Enjoy your dayyy, mutheee 🥹🎂❤️', delay: 4.8 },
+      { text: 'Ini thazhe ulla button onnu tap cheytheee 👀❤️', delay: 6.2 },
+    ],
+    buttonTexts: ['Happy birthday', 'For you'],
+    ambientMusicUrl: '/music/birthday-ambient.mp3',
+    cakeMusicUrl: '/music/birthday-cake.mp3',
+    musicUrl: '/music/birthday-celebration.mp3',
+    signatureText: 'Happy birthday, ' + (Math.random() < 0.5 ? 'Entte Anguu' : 'Anguuu') + '.',
+  },
+]

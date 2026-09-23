@@ -1,6 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
 
-function Letter() {
+function Letter({
+  dateText = 'June 27, 2026',
+  salutation = 'My dearest,',
+  paragraphs = [
+    "One year ago, something wonderful started — you.",
+    "This past year, you have made ordinary days feel like something worth remembering. Your smile is my favorite sight. Your presence is my favorite place.",
+    "I'm so grateful you're mine, and I am yours.",
+  ],
+  signOff = '— forever yours',
+}) {
   const [visible, setVisible] = useState(false)
   const ref = useRef(null)
 
@@ -30,35 +39,48 @@ function Letter() {
           <span className="letter-seal-glyph">✦</span>
         </div>
 
-        <p className="letter-date">June 27, 2026</p>
+        <p className="letter-date">{dateText}</p>
 
-        <p className="letter-salutation">My dearest,</p>
+        <p className="letter-salutation">{salutation}</p>
 
         <div className="letter-body">
-        <p className="letter-paragraph letter-p1">
-          One year ago, something wonderful started — you.
-        </p>
-        <p className="letter-paragraph letter-p2">
-          This past year, you have made ordinary days feel like something worth remembering.
-          Your smile is my favorite sight. Your presence is my favorite place.
-        </p>
-        <p className="letter-paragraph letter-p3">
-          I'm so grateful you're mine, and I am yours.
-        </p>
-      </div>
+          {paragraphs.map((p, index) => (
+            <p
+              key={index}
+              className={`letter-paragraph letter-p${index + 1}`}
+              style={
+                visible
+                  ? {
+                      opacity: 1,
+                      transform: 'translateY(0)',
+                      transitionDelay: `${0.3 + index * 0.25}s`,
+                    }
+                  : undefined
+              }
+            >
+              {p}
+            </p>
+          ))}
+        </div>
 
-        <div className="letter-divider">
+        <div
+          className="letter-divider"
+          style={visible ? { opacity: 1, transitionDelay: `${0.3 + paragraphs.length * 0.25}s` } : undefined}
+        >
           <span className="letter-divider-line" />
           <span className="letter-divider-dot">✦</span>
           <span className="letter-divider-line" />
         </div>
 
-        <p className="letter-sign">— forever yours</p>
+        <p
+          className="letter-sign"
+          style={visible ? { opacity: 1, transform: 'translateY(0)', transitionDelay: `${0.55 + paragraphs.length * 0.25}s` } : undefined}
+        >
+          {signOff}
+        </p>
       </div>
 
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=EB+Garamond:ital,wght@0,400;1,400&family=Dancing+Script:wght@400;500&display=swap');
-
         .letter-wrap {
           position: relative;
           background: linear-gradient(
@@ -168,13 +190,13 @@ function Letter() {
         }
 
         .letter-salutation {
-          font-family: 'Dancing Script', cursive;
+          font-family: 'Dancing Script', 'EB Garamond', 'Noto Sans Malayalam', Georgia, cursive, sans-serif;
           font-size: 24px;
           font-weight: 400;
           color: rgba(100, 30, 55, 0.85);
           margin: 0 0 1.4rem 0;
           padding-left: 0.5rem;
-          line-height: 1.3;
+          line-height: 1.4;
         }
 
         .letter-body {
@@ -182,7 +204,7 @@ function Letter() {
         }
 
         .letter-paragraph {
-          font-family: 'EB Garamond', Georgia, serif;
+          font-family: 'EB Garamond', 'Noto Sans Malayalam', Georgia, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
           font-size: 16px;
           font-style: italic;
           line-height: 1.95;
@@ -223,7 +245,7 @@ function Letter() {
         }
 
         .letter-sign {
-          font-family: 'Dancing Script', cursive;
+          font-family: 'Dancing Script', 'EB Garamond', 'Noto Sans Malayalam', Georgia, cursive, sans-serif;
           font-size: 22px;
           font-weight: 400;
           color: rgba(120, 30, 60, 0.7);

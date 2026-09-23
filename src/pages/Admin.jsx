@@ -174,8 +174,6 @@ function Admin() {
       </div>
 
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;1,400&display=swap');
-
         .admin-page {
           max-width: 460px;
           margin: 0 auto;
