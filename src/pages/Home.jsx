@@ -72,7 +72,7 @@ function Home({ role }) {
     audio.volume = 0.25
     audio.load()
     if (!isDuckedRef.current) {
-      audio.play().catch(() => {})
+      audio.play().catch(() => { })
     }
 
     const removeListeners = () => {
@@ -88,7 +88,7 @@ function Home({ role }) {
           .then(() => {
             removeListeners()
           })
-          .catch(() => {})
+          .catch(() => { })
       }
     }
 
@@ -165,7 +165,7 @@ function Home({ role }) {
             }}
             onCelebrationClose={() => {
               isDuckedRef.current = false
-              ambientAudioRef.current?.play().catch(() => {})
+              ambientAudioRef.current?.play().catch(() => { })
             }}
           />
         )}
@@ -210,7 +210,7 @@ function Home({ role }) {
             onClose={() => {
               isDuckedRef.current = false
               setBirthdayCakeOpen(false)
-              ambientAudioRef.current?.play().catch(() => {})
+              ambientAudioRef.current?.play().catch(() => { })
             }}
           />
         )}

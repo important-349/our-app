@@ -7,7 +7,7 @@ import { initBirthdayCakeScene } from './BirthdayCakeScene'
  * 'intro' -> 'cake' -> 'wind' -> 'extinguishing' -> 'smoke' -> 'pause' -> 'poppers' -> 'celebration_settling' -> 'message'
  */
 export function Birthday3DExperience({ musicUrl, onClose = () => {}, onOpen = () => {} }) {
-  const [bdayNickname] = useState(() => (Math.random() < 0.5 ? 'Entte Anguu' : 'Anguuu'))
+  const [bdayNickname] = useState('Anguuu')
   const [sequenceStage, setSequenceStage] = useState('intro')
   const [blowReady, setBlowReady] = useState(false)
   const [isBlowing, setIsBlowing] = useState(false)
@@ -163,10 +163,10 @@ export function Birthday3DExperience({ musicUrl, onClose = () => {}, onOpen = ()
               </div>
               <div className="bday3d-bottom-body">
                 <p>
-                  Let this year be happier, brighter, and full of growth — leading you toward the beautiful future you deserve.
+                  Enikk ariyilla nee entha wish cheyyunnath enn, but whatever it is, I genuinely hope you get it. ❤️
                 </p>
                 <p>
-                  sorry for the 3d cake but one day we will celeberate your birthday with a real one together
+                  Pinne sorry for this 3D cake 😭 oru cake okke order cheyth tharanam enn undayirunnu, but paisa illa muthee 😭 pakshe oru divasam namukk orumichu oru real cake vech celebrate cheyyam. ❤️
                 </p>
               </div>
               <button className="bday3d-bottom-btn" onClick={handleClose}>

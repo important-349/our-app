@@ -11,7 +11,7 @@ import { createCelebrationManager } from './celebrationManager'
 export function initBirthdayCakeScene(container, options = {}) {
   if (!container) return null
 
-  const nickname = options.nickname || (Math.random() < 0.5 ? 'Entte Anguu' : 'Anguuu')
+  const nickname = options.nickname || 'Anguuu'
 
   // 1. Scene setup
   const scene = new THREE.Scene()
